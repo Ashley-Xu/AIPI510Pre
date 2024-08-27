@@ -19,7 +19,7 @@ class TestMain:
         cls.tempDir = "./tests/res-temp/"
         cls.outputFile = "./tests/res-temp/example_output_test.csv"
 
-        shutil.rmtree(cls.tempDir)
+        shutil.rmtree(cls.tempDir, ignore_errors=True)
         os.makedirs(cls.tempDir, exist_ok=True)
 
     def teardown_class(cls):
